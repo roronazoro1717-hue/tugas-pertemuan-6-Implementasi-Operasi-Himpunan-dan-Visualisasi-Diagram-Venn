@@ -1,0 +1,55 @@
+
+##### Dataset: data/dataset1_keahlian_mahasiswa.csv  |U|=24
+  Desain       |Desain|=10  {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+  Programming  |Programming|= 9  {6, 7, 8, 9, 11, 12, 13, 14, 15}
+  Video        |Video|= 7  {8, 9, 10, 12, 16, 17, 18}
+  union        Desain ∪ Programming ∪ Video = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}  (n=18)
+  intersection Desain ∩ Programming ∩ Video = {8, 9}  (n=2)
+  complement   (Desain)ᶜ = {11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24}  (n=14)
+
+=== Prinsip Inklusi-Eksklusi ===
+  k=1 (+): |Desain|=10; |Programming|=9; |Video|=7  -> jumlah=26
+  k=2 (−): |Desain ∩ Programming|=4; |Desain ∩ Video|=3; |Programming ∩ Video|=3  -> jumlah=10
+  k=3 (+): |Desain ∩ Programming ∩ Video|=2  -> jumlah=2
+  Hasil PIE        : 18
+  Hitung langsung  : 18
+  Verifikasi       : COCOK
+  Di luar semua    : 6
+  Diagram Venn disimpan: output/venn_dataset1.png
+
+##### Dataset: data/dataset2_platform_responden.csv  |U|=20
+  YouTube      |YouTube|=12  {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
+  TikTok       |TikTok|= 9  {2, 3, 5, 6, 9, 13, 14, 15, 16}
+  Instagram    |Instagram|= 9  {3, 4, 6, 7, 10, 14, 15, 17, 18}
+  X            |X|= 6  {6, 8, 12, 16, 18, 19}
+  union        YouTube ∪ TikTok ∪ Instagram ∪ X = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}  (n=19)
+  intersection YouTube ∩ TikTok ∩ Instagram ∩ X = {6}  (n=1)
+  complement   (YouTube)ᶜ = {13, 14, 15, 16, 17, 18, 19, 20}  (n=8)
+
+=== Prinsip Inklusi-Eksklusi ===
+  k=1 (+): |YouTube|=12; |TikTok|=9; |Instagram|=9; |X|=6  -> jumlah=36
+  k=2 (−): |YouTube ∩ TikTok|=5; |YouTube ∩ Instagram|=5; |YouTube ∩ X|=3; |TikTok ∩ Instagram|=4; |TikTok ∩ X|=2; |Instagram ∩ X|=2  -> jumlah=21
+  k=3 (+): |YouTube ∩ TikTok ∩ Instagram|=2; |YouTube ∩ TikTok ∩ X|=1; |YouTube ∩ Instagram ∩ X|=1; |TikTok ∩ Instagram ∩ X|=1  -> jumlah=5
+  k=4 (−): |YouTube ∩ TikTok ∩ Instagram ∩ X|=1  -> jumlah=1
+  Hasil PIE        : 19
+  Hitung langsung  : 19
+  Verifikasi       : COCOK
+  Di luar semua    : 1
+
+##### Dataset: data/dataset2_platform_responden.csv  |U|=20
+  YouTube      |YouTube|=12  {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
+  TikTok       |TikTok|= 9  {2, 3, 5, 6, 9, 13, 14, 15, 16}
+  Instagram    |Instagram|= 9  {3, 4, 6, 7, 10, 14, 15, 17, 18}
+  union        YouTube ∪ TikTok ∪ Instagram = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}  (n=18)
+  intersection YouTube ∩ TikTok ∩ Instagram = {3, 6}  (n=2)
+  complement   (YouTube)ᶜ = {13, 14, 15, 16, 17, 18, 19, 20}  (n=8)
+
+=== Prinsip Inklusi-Eksklusi ===
+  k=1 (+): |YouTube|=12; |TikTok|=9; |Instagram|=9  -> jumlah=30
+  k=2 (−): |YouTube ∩ TikTok|=5; |YouTube ∩ Instagram|=5; |TikTok ∩ Instagram|=4  -> jumlah=14
+  k=3 (+): |YouTube ∩ TikTok ∩ Instagram|=2  -> jumlah=2
+  Hasil PIE        : 18
+  Hitung langsung  : 18
+  Verifikasi       : COCOK
+  Di luar semua    : 2
+  Diagram Venn disimpan: output/venn_dataset2.png
